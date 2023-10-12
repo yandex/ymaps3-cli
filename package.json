@@ -1,9 +1,10 @@
 {
   "name": "@yandex/ymaps3-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Library for encapsulating the logic of autotests and building packages ymaps3 js API",
   "main": "dist/index.js",
   "dependencies": {
+    "dotenv": "16.3.1",
     "marked": "^9.0.2",
     "yargs": "17.7.2"
   },
@@ -19,7 +20,6 @@
     "ajv": "7.2.4",
     "cross-fetch": "4.0.0",
     "css-loader": "6.8.1",
-    "dotenv": "16.3.1",
     "eslint": "8.44.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",

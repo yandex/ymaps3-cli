@@ -20,4 +20,4 @@ jobs:
       - name: Run Tests
         run: |
           npm ci
-          APIKEY=${{ secrets.APIKEY }} npm test
+          REFERRER=${{ secrets.REFERRER }} APIKEY=${{ secrets.APIKEY }} npm test

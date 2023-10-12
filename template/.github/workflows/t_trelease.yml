@@ -27,11 +27,11 @@ jobs:
 
     - name: Build
       run: |
-        APIKEY=${{ secrets.APIKEY }} npm run build
+        REFERRER=${{ secrets.REFERRER }} APIKEY=${{ secrets.APIKEY }} npm run build
 
     - name: Test
       run: |
-        APIKEY=${{ secrets.APIKEY }} npm test
+        REFERRER=${{ secrets.REFERRER }} APIKEY=${{ secrets.APIKEY }} npm test
 
     - name: Publish
       run: |

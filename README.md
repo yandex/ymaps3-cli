@@ -1,6 +1,5 @@
 # Yandex JS CLI utils
 
-[![Build Status](https://github.com/ymaps/ymaps3-cli/workflows/Run%20tests/badge.svg)](https://github.com/ymaps3-world/ymaps3-cli/actions/workflows/tests.yml)
 [![npm version](https://badge.fury.io/js/@yandex%2Fymaps3-cli.svg)](https://badge.fury.io/js/@yandex%2Fymaps3-cli)
 [![npm](https://img.shields.io/npm/dm/@yandex/ymaps3-cli.svg)](https://www.npmjs.com/package/@yandex/ymaps3-cli)
 

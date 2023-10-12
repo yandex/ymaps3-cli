@@ -14,8 +14,8 @@ ymaps3.import.loaders.unshift(async (pkg) => {
 
 
 const BOUNDS = [
-    [54.58311, 25.99850],
-    [56.30248, 24.47889]
+    [36.76340182421873, 56.50491493486398],
+    [38.48276217578123, 54.98530386445313]
 ];
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

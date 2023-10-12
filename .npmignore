@@ -1,0 +1,12 @@
+.idea
+.vscode
+/.github
+node_modules
+/src
+/tests
+.editorconfig
+.env
+.gitignore
+.npmignore
+tsconfig.cli.json
+.DS_Store

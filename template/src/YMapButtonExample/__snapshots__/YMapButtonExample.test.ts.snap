@@ -78,12 +78,6 @@ exports[`YMap smoke test should make map 1`] = `
               },
               "children": [
                 "Some text",
-                {
-                  "attributes": {
-                    "class": "user-class",
-                  },
-                  "nodeName": "div",
-                },
               ],
               "nodeName": "button",
             },
@@ -125,7 +119,7 @@ exports[`YMap smoke test should make map 1`] = `
         },
         {
           "attributes": {
-            "class": "ymaps3x0--map-copyrights__logo ymaps3x0--icon-logo-en-black",
+            "class": "ymaps3x0--icon-logo-en-black ymaps3x0--map-copyrights__logo",
             "style": "width: 46px; height: 20px;",
           },
           "nodeName": "span",

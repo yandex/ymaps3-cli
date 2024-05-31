@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React YMap test should make react map 1`] = `
+{
+  "attributes": {
+    "class": "ymaps3x0--map-container",
+  },
+  "children": [
+    {
+      "attributes": {
+        "class": "ymaps3x0--map",
+        "style": "width: 640px; height: 480px;",
+      },
+      "children": [
+        {
+          "attributes": {
+            "class": "ymaps3x0--main-engine-container",
+          },
+          "children": [
+            {
+              "attributes": {},
+              "children": [
+                {
+                  "attributes": {
+                    "class": "ymaps3x0--layer ymaps3x0--tile-layer",
+                    "style": "perspective: 895.6921938165306px; opacity: 1;",
+                  },
+                  "children": [
+                    {
+                      "attributes": {
+                        "class": "ymaps3x0--tile-layer__container",
+                        "data-z": "12",
+                        "style": "transform: 
+            rotateX(0.00000rad)
+            translate3d(0px, 0px, 0px)
+            rotateZ(0.00000rad) translate3d(0px, 0px, 0px)
+        ;",
+                      },
+                      "nodeName": "ymaps",
+                    },
+                  ],
+                  "nodeName": "ymaps",
+                },
+              ],
+              "nodeName": "ymaps",
+            },
+          ],
+          "nodeName": "ymaps",
+        },
+        {
+          "attributes": {
+            "class": "ymaps3x0--top-engine-container",
+          },
+          "children": [
+            {
+              "attributes": {},
+              "children": [
+                {
+                  "attributes": {
+                    "class": "ymaps3x0--layer ymaps3x0--graphics-layer",
+                    "style": "perspective: 895.6921938165306px; opacity: 1; display: none;",
+                  },
+                  "children": [
+                    {
+                      "attributes": {
+                        "xlink": "http://www.w3.org/1999/xlink",
+                      },
+                      "children": [
+                        {
+                          "attributes": {},
+                          "nodeName": "g",
+                        },
+                      ],
+                      "nodeName": "svg",
+                    },
+                  ],
+                  "nodeName": "ymaps",
+                },
+                {
+                  "attributes": {
+                    "class": "ymaps3x0--layer ymaps3x0--marker-layer",
+                    "style": "opacity: 1; transform-origin: 320px 240px;",
+                  },
+                  "nodeName": "ymaps",
+                },
+              ],
+              "nodeName": "ymaps",
+            },
+          ],
+          "nodeName": "ymaps",
+        },
+      ],
+      "nodeName": "ymaps",
+    },
+    {
+      "attributes": {
+        "class": "ymaps3x0--controls ymaps3x0--controls_center ymaps3x0--controls_left ymaps3x0--controls_vertical",
+      },
+      "children": [
+        {
+          "attributes": {
+            "class": "ymaps3x0--control ymaps3x0--control__background",
+          },
+          "children": [
+            {
+              "attributes": {},
+              "children": [
+                "test control",
+              ],
+              "nodeName": "div",
+            },
+          ],
+          "nodeName": "ymaps",
+        },
+      ],
+      "nodeName": "ymaps",
+    },
+    {
+      "attributes": {
+        "class": "ymaps3x0--map-copyrights ymaps3x0--map-copyrights_bottom ymaps3x0--map-copyrights_right",
+      },
+      "children": [
+        {
+          "attributes": {
+            "class": "ymaps3x0--map-copyrights__container",
+          },
+          "children": [
+            {
+              "attributes": {
+                "class": "ymaps3x0--map-copyrights__text",
+              },
+              "nodeName": "span",
+            },
+            {
+              "attributes": {
+                "class": "ymaps3x0--map-copyrights__user-agreements",
+                "href": "https://yandex.com/legal/maps_termsofuse/?lang=en_US",
+                "target": "_blank",
+              },
+              "children": [
+                "User Agreement",
+              ],
+              "nodeName": "a",
+            },
+          ],
+          "nodeName": "div",
+        },
+        {
+          "attributes": {
+            "class": "ymaps3x0--icon-logo-en-black ymaps3x0--map-copyrights__logo",
+            "style": "width: 46px; height: 20px;",
+          },
+          "nodeName": "span",
+        },
+        {
+          "attributes": {
+            "class": "ymaps3x0--map-copyrights__scale",
+          },
+          "nodeName": "div",
+        },
+      ],
+      "nodeName": "div",
+    },
+  ],
+  "nodeName": "ymaps",
+}
+`;

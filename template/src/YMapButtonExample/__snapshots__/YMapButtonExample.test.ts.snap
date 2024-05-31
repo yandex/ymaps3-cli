@@ -34,7 +34,7 @@ exports[`YMap smoke test should make map 1`] = `
             rotateX(0.00000rad)
             translate3d(0px, 0px, 0px)
             rotateZ(0.00000rad) translate3d(0px, 0px, 0px)
-        ; z-index: 9;",
+        ;",
                       },
                       "nodeName": "ymaps",
                     },
@@ -69,7 +69,7 @@ exports[`YMap smoke test should make map 1`] = `
       "children": [
         {
           "attributes": {
-            "class": "ymaps3x0--control",
+            "class": "ymaps3x0--control ymaps3x0--control__background",
           },
           "children": [
             {
@@ -123,6 +123,12 @@ exports[`YMap smoke test should make map 1`] = `
             "style": "width: 46px; height: 20px;",
           },
           "nodeName": "span",
+        },
+        {
+          "attributes": {
+            "class": "ymaps3x0--map-copyrights__scale",
+          },
+          "nodeName": "div",
         },
       ],
       "nodeName": "div",

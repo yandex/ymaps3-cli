@@ -75,6 +75,7 @@ exports[`YMap smoke test should make map 1`] = `
             {
               "attributes": {
                 "class": "ymaps3x0--button ymaps3x0--control-button",
+                "type": "button",
               },
               "children": [
                 "Some text",

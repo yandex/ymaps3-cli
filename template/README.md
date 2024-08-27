@@ -4,7 +4,7 @@
 
 Yandex JS API package
 
-[![npm version](https://badge.fury.io/js/%PACKAGE_NAME_ENC%.svg)](https://badge.fury.io/js/%PACKAGE_NAME%)
+[![npm version](https://badge.fury.io/js/%PACKAGE_NAME_ENCODED%.svg)](https://badge.fury.io/js/%PACKAGE_NAME_ENCODED%)
 [![npm](https://img.shields.io/npm/dm/%PACKAGE_NAME%.svg)](https://www.npmjs.com/package/%PACKAGE_NAME%)
 
 ## How use
@@ -15,7 +15,7 @@ The package is located in the `dist` folder:
 - `dist/esm` es6 modules for direct connection in your project
 - `dist/index.js` Yandex JS Module
 
-Recommended use `YMapEntityTileLoader` as usual npm package:
+Recommended use `YMapButtonExample` as usual npm package:
 
 ```sh
 npm i %PACKAGE_NAME%
@@ -24,42 +24,30 @@ npm i %PACKAGE_NAME%
 and dynamic import
 
 ```js
-const {YMapEntityTileLoader} = await import('%PACKAGE_NAME%/dist/esm/index');
+await ymaps3.ready;
+
+// ...
+
+const {YMapButtonExample} = await import('%PACKAGE_NAME%');
+
+// ...
+
+map.addChild(new YMapButtonExample(props));
 ```
 
-But you can use CDN with module loading handler in JS API:
+### Usage without npm
 
-### Development
+You can use CDN with module loading handler in JS API on your page.
+
+Just use `ymaps3.import`:
 
 ```js
-ymaps3.import.loaders.unshift(async (pkg) => {
-  if (!pkg.startsWith('%PACKAGE_NAME%')) {
-    return;
-  }
-
-  await ymaps3.import.script(`./node_modules/%PACKAGE_NAME%/dist/index.js`);
-
-  return window['%PACKAGE_NAME%'];
-});
+const pkg = await ymaps3.import('%PACKAGE_NAME%');
 ```
 
-### Production
+By default `ymaps3.import` can load self modules.
+If you want also load your package, should register cdn:
 
 ```js
-ymaps3.import.loaders.unshift(async (pkg) => {
-  if (!pkg.includes('%PACKAGE_NAME%')) {
-    return;
-  }
-
-  // You can use another CDN
-  await ymaps3.import.script(`https://unpkg.com/${pkg}/dist/index.js`);
-
-  return window[`${pkg}`];
-});
-```
-
-and in your final code just use `ymaps3.import`
-
-```js
-const pkg = await ymaps3.import('%PACKAGE_NAME%')
+ymaps3.import.registerCdn('https://cdn.jsdelivr.net/npm/{package}', '%PACKAGE_NAME%@latest');
 ```

@@ -23,18 +23,14 @@ exports[`React YMap test should make react map 1`] = `
                 {
                   "attributes": {
                     "class": "ymaps3x0--layer ymaps3x0--tile-layer",
-                    "style": "perspective: 895.6921938165306px; opacity: 1;",
+                    "style": "opacity: 1; perspective: 895.6921938165306px;",
                   },
                   "children": [
                     {
                       "attributes": {
                         "class": "ymaps3x0--tile-layer__container",
                         "data-z": "12",
-                        "style": "transform: 
-            rotateX(0.00000rad)
-            translate3d(0px, 0px, 0px)
-            rotateZ(0.00000rad) translate3d(0px, 0px, 0px)
-        ;",
+                        "style": "transform: rotateX(0.00000rad) translate3d(0px, 0px, 0px) rotateZ(0.00000rad) translate3d(0px, 0px, 0px); z-index: 12;",
                       },
                       "nodeName": "ymaps",
                     },
@@ -58,22 +54,8 @@ exports[`React YMap test should make react map 1`] = `
                 {
                   "attributes": {
                     "class": "ymaps3x0--layer ymaps3x0--graphics-layer",
-                    "style": "perspective: 895.6921938165306px; opacity: 1; display: none;",
+                    "style": "opacity: 1; perspective: 895.6921938165306px;",
                   },
-                  "children": [
-                    {
-                      "attributes": {
-                        "xlink": "http://www.w3.org/1999/xlink",
-                      },
-                      "children": [
-                        {
-                          "attributes": {},
-                          "nodeName": "g",
-                        },
-                      ],
-                      "nodeName": "svg",
-                    },
-                  ],
                   "nodeName": "ymaps",
                 },
                 {
@@ -128,8 +110,9 @@ exports[`React YMap test should make react map 1`] = `
             {
               "attributes": {
                 "class": "ymaps3x0--map-copyrights__text",
+                "title": "",
               },
-              "nodeName": "span",
+              "nodeName": "ymaps",
             },
             {
               "attributes": {
@@ -143,23 +126,24 @@ exports[`React YMap test should make react map 1`] = `
               "nodeName": "a",
             },
           ],
-          "nodeName": "div",
+          "nodeName": "ymaps",
         },
         {
           "attributes": {
-            "class": "ymaps3x0--icon-logo-en-black ymaps3x0--map-copyrights__logo",
+            "class": "ymaps3x0--map-copyrights__logo ymaps3x0--icon-logo-en-black",
             "style": "width: 46px; height: 20px;",
           },
-          "nodeName": "span",
+          "nodeName": "ymaps",
         },
         {
           "attributes": {
             "class": "ymaps3x0--map-copyrights__scale",
+            "style": "bottom: 36px;",
           },
-          "nodeName": "div",
+          "nodeName": "ymaps",
         },
       ],
-      "nodeName": "div",
+      "nodeName": "ymaps",
     },
   ],
   "nodeName": "ymaps",

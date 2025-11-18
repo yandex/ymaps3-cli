@@ -114,7 +114,8 @@ module.exports = async function () {
                 disconnect() {},
                 observe() {}
             };
-        }
+        },
+        NodeFilter: dom.window.NodeFilter
     };
 
     Object.defineProperties(dom.window.Element.prototype, {

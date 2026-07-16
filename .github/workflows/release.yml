@@ -23,9 +23,7 @@ jobs:
       with:
         node-version-file: '.nvmrc'
         cache: 'npm'
-
-    - name: Update npm # OIDC trusted publishing requires npm >= 11.5.1
-      run: npm install -g npm@latest
+        # Node 24.12.0 ships npm 11.6.2, which supports OIDC trusted publishing (needs npm >= 11.5.1).
 
     - name: Install dependencies
       run: |

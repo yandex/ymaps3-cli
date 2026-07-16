@@ -51,14 +51,28 @@ module.exports = async function () {
     });
 
     const appendChild = dom.window.document.head.appendChild.bind(dom.window.document.head);
-    dom.window.document.head.appendChild = <T extends Node>(script: T): T => {
-        if (isScript(script)) {
-            loadAndExecuteScript(script.src)
-                .then(() => script.dispatchEvent(new dom.window.Event('load')))
+    dom.window.document.head.appendChild = <T extends Node>(node: T): T => {
+        if (isScript(node)) {
+            loadAndExecuteScript(node.src)
+                .then(() => node.dispatchEvent(new dom.window.Event('load')))
                 .catch((e) => console.log('Error', e));
+        } else if (isLink(node)) {
+            // The JS API loads its stylesheet via <link href> (e.g. main.css). JSDOM neither
+            // fetches it nor fires `load`, so the loader promise — and thus `ymaps3.ready` —
+            // would hang. Fetch the CSS and inject it as a <style> so that `getComputedStyle`
+            // sees the rules (needed by layout-dependent code such as the map container size),
+            // then emit `load` so the loader promise settles.
+            got(node.href, {headers: {Referer: REFERRER}})
+                .then(({body}) => {
+                    const style = dom.window.document.createElement('style');
+                    style.textContent = body;
+                    appendChild(style);
+                })
+                .catch((e) => console.log('Error', e))
+                .finally(() => node.dispatchEvent(new dom.window.Event('load')));
         }
 
-        return appendChild(script);
+        return appendChild(node);
     };
 
     const context: any = {
@@ -149,6 +163,10 @@ module.exports = async function () {
 
 function isScript(node: Node): node is HTMLScriptElement {
     return node.nodeName === 'SCRIPT';
+}
+
+function isLink(node: Node): node is HTMLLinkElement {
+    return node.nodeName === 'LINK';
 }
 
 function isElement(node: Node): node is Element {

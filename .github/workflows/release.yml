@@ -5,6 +5,10 @@ on:
   push:
     tags: ["*"]
 
+permissions:
+    id-token: write
+    contents: read
+    
 jobs:
   release:
 

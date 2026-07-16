@@ -1,6 +1,6 @@
 {
   "name": "@yandex/ymaps3-cli",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "Library for encapsulating the logic of autotests and building packages ymaps3 js API",
   "main": "dist/index.js",
   "dependencies": {

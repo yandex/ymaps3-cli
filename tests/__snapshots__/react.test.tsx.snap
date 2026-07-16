@@ -3,18 +3,18 @@
 exports[`React YMap test should make react map 1`] = `
 {
   "attributes": {
-    "class": "ymaps3x0--map-container",
+    "class": "ymaps3--map-container",
   },
   "children": [
     {
       "attributes": {
-        "class": "ymaps3x0--map",
+        "class": "ymaps3--map",
         "style": "width: 640px; height: 480px;",
       },
       "children": [
         {
           "attributes": {
-            "class": "ymaps3x0--main-engine-container",
+            "class": "ymaps3--main-engine-container",
           },
           "children": [
             {
@@ -22,30 +22,30 @@ exports[`React YMap test should make react map 1`] = `
               "children": [
                 {
                   "attributes": {
-                    "class": "ymaps3x0--layer ymaps3x0--tile-layer",
+                    "class": "ymaps3--layer ymaps3--tile-layer",
                     "style": "opacity: 1; perspective: 895.6921938165306px;",
                   },
                   "children": [
                     {
                       "attributes": {
-                        "class": "ymaps3x0--tile-layer__container",
+                        "class": "ymaps3--tile-layer__container",
                         "data-z": "12",
                         "style": "transform: rotateX(0.00000rad) translate3d(0px, 0px, 0px) rotateZ(0.00000rad) translate3d(0px, 0px, 0px); z-index: 12;",
                       },
-                      "nodeName": "ymaps",
+                      "nodeName": "ymaps3",
                     },
                   ],
-                  "nodeName": "ymaps",
+                  "nodeName": "ymaps3",
                 },
               ],
-              "nodeName": "ymaps",
+              "nodeName": "ymaps3",
             },
           ],
-          "nodeName": "ymaps",
+          "nodeName": "ymaps3",
         },
         {
           "attributes": {
-            "class": "ymaps3x0--top-engine-container",
+            "class": "ymaps3--top-engine-container",
           },
           "children": [
             {
@@ -53,35 +53,35 @@ exports[`React YMap test should make react map 1`] = `
               "children": [
                 {
                   "attributes": {
-                    "class": "ymaps3x0--layer ymaps3x0--graphics-layer",
+                    "class": "ymaps3--layer ymaps3--graphics-layer",
                     "style": "opacity: 1; perspective: 895.6921938165306px;",
                   },
-                  "nodeName": "ymaps",
+                  "nodeName": "ymaps3",
                 },
                 {
                   "attributes": {
-                    "class": "ymaps3x0--layer ymaps3x0--marker-layer",
+                    "class": "ymaps3--layer ymaps3--marker-layer",
                     "style": "opacity: 1; transform-origin: 320px 240px;",
                   },
-                  "nodeName": "ymaps",
+                  "nodeName": "ymaps3",
                 },
               ],
-              "nodeName": "ymaps",
+              "nodeName": "ymaps3",
             },
           ],
-          "nodeName": "ymaps",
+          "nodeName": "ymaps3",
         },
       ],
-      "nodeName": "ymaps",
+      "nodeName": "ymaps3",
     },
     {
       "attributes": {
-        "class": "ymaps3x0--controls ymaps3x0--controls_center ymaps3x0--controls_left ymaps3x0--controls_vertical",
+        "class": "ymaps3--controls ymaps3--controls_center ymaps3--controls_left ymaps3--controls_vertical",
       },
       "children": [
         {
           "attributes": {
-            "class": "ymaps3x0--control ymaps3x0--control__background",
+            "class": "ymaps3--control ymaps3--control__background",
           },
           "children": [
             {
@@ -92,31 +92,31 @@ exports[`React YMap test should make react map 1`] = `
               "nodeName": "div",
             },
           ],
-          "nodeName": "ymaps",
+          "nodeName": "ymaps3",
         },
       ],
-      "nodeName": "ymaps",
+      "nodeName": "ymaps3",
     },
     {
       "attributes": {
-        "class": "ymaps3x0--map-copyrights ymaps3x0--map-copyrights_bottom ymaps3x0--map-copyrights_right",
+        "class": "ymaps3--map-copyrights ymaps3--map-copyrights_bottom ymaps3--map-copyrights_right",
       },
       "children": [
         {
           "attributes": {
-            "class": "ymaps3x0--map-copyrights__container",
+            "class": "ymaps3--map-copyrights__container",
           },
           "children": [
             {
               "attributes": {
-                "class": "ymaps3x0--map-copyrights__text",
+                "class": "ymaps3--map-copyrights__text",
                 "title": "",
               },
-              "nodeName": "ymaps",
+              "nodeName": "ymaps3",
             },
             {
               "attributes": {
-                "class": "ymaps3x0--map-copyrights__user-agreements",
+                "class": "ymaps3--map-copyrights__user-agreements",
                 "href": "https://yandex.com/legal/maps_termsofuse/?lang=en_US",
                 "target": "_blank",
               },
@@ -126,26 +126,26 @@ exports[`React YMap test should make react map 1`] = `
               "nodeName": "a",
             },
           ],
-          "nodeName": "ymaps",
+          "nodeName": "ymaps3",
         },
         {
           "attributes": {
-            "class": "ymaps3x0--map-copyrights__logo ymaps3x0--icon-logo-en-black",
-            "style": "width: 46px; height: 20px;",
+            "class": "ymaps3--map-copyrights__logo ymaps3--icon-logo-en-black",
+            "href": "https://yandex.ru/maps/?from=api-maps&utm_source=jsapi&ll=37.62000000000001%2C55.749999999993705&origin=jsapi_3&z=12&l=map",
           },
-          "nodeName": "ymaps",
+          "nodeName": "a",
         },
         {
           "attributes": {
-            "class": "ymaps3x0--map-copyrights__scale",
+            "class": "ymaps3--map-copyrights__scale",
             "style": "bottom: 36px;",
           },
-          "nodeName": "ymaps",
+          "nodeName": "ymaps3",
         },
       ],
-      "nodeName": "ymaps",
+      "nodeName": "ymaps3",
     },
   ],
-  "nodeName": "ymaps",
+  "nodeName": "ymaps3",
 }
 `;

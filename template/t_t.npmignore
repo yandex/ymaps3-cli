@@ -19,3 +19,4 @@ example
 tsconfig.json
 
 *.tgz
+.env.*

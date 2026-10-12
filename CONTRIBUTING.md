@@ -12,9 +12,9 @@ file. Obtain a key at https://developer.tech.yandex.ru/ and allow the referrer y
 use locally (for example, `http://yandex.localhost/`). Set `REFERRER` accordingly.
 
 ```sh
-node ./dist --help
 npm run lint
 npm run build
+node ./dist --help
 REFERRER=http://yandex.localhost/ npm test -- --runInBand
 npm pack --dry-run
 ```

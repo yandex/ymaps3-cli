@@ -2,9 +2,11 @@
 
 **%PACKAGE_NAME% Version:**  xxxxx
 
-**Browser:**  <!-- Chrome/IE/Safary/FF -->
+**Node.js:**  <!-- node --version -->
+**npm:**  <!-- npm --version -->
+**Browser (if applicable):**  <!-- Chrome/Safari/Firefox -->
 **OS:**  <!-- Windows/Mac/Linux -->
-**Is React App:**  <!-- True/False -->
+**Is React App (if applicable):**  <!-- True/False -->
 
 **Code**
 

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <title>React example @yandex/ymaps3-entity-tile-loader</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/6.5.0/turf.min.js"
+            integrity="sha512-Q7HOppxoH0L2M7hreVoFCtUZimR2YaY0fBewIYzkCgmNtgOOZ5IgMNYxHgfps0qrO1ef5m7L1FeHrhXlq1I9HA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="https://api-maps.yandex.ru/v3/?apikey=%APIKEY%&lang=en_US"></script>
+        <script src="common.js"></script>
+
+        <script type="text/babel">
+            window.map = null;
+
+            main();
+            async function main() {
+                const [ymaps3React] = await Promise.all([
+                    ymaps3.import('@yandex/ymaps3-reactify'),
+                    ymaps3.ready
+                ]);
+
+                ymaps3.strictMode = true;
+                const reactify = ymaps3React.reactify.bindTo(React, ReactDOM);
+
+                const {
+                    YMap,
+                    YMapDefaultSchemeLayer,
+                    YMapDefaultFeaturesLayer,
+                    YMapControls,
+                } = reactify.module(ymaps3);
+
+                const {useState, useCallback} = React;
+
+                const {YMapZoomControl} = reactify.module(
+                    await ymaps3.import('@yandex/ymaps3-controls@0.0.1')
+                );
+
+                ReactDOM.render(
+                    <React.StrictMode>
+                        <App />
+                    </React.StrictMode>,
+                    document.getElementById('app')
+                );
+
+                function App() {
+                    const [location] = useState(LOCATION);
+
+                    return (
+                        <YMap location={location} zoomRange={ZOOM_RANGE} ref={(x) => (map = x)}>
+                            <YMapDefaultSchemeLayer />
+                            <YMapDefaultFeaturesLayer />
+                            <YMapControls position="right">
+                                <YMapZoomControl />
+                            </YMapControls>
+                        </YMap>
+                    );
+                }
+            }
+        </script>
+
+        <link rel="stylesheet" href="common.css" />
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
+</html>

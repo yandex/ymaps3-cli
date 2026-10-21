@@ -15,12 +15,13 @@ use locally (for example, `http://yandex.localhost/`). Set `REFERRER` accordingl
 npm start
 npm run lint
 npm run build
-REFERRER=http://yandex.localhost/ npm test -- --runInBand
+REFERRER=http://yandex.localhost/ npm test
 npm pack --dry-run
 ```
 
-Building the package makes no JS API requests. In CI it uses `APIKEY=build-only`
-because the shared webpack configuration requires a nonempty key.
+Building the package makes no JS API requests, but the shared webpack configuration
+requires a nonempty key. In CI, both build and tests use the `APIKEY` and `REFERRER`
+secrets.
 
 The Jest setup makes `navigator` and `crypto` writable in Jest 29 on Node 24 before
 `@yandex/ymaps3-cli` installs its JSDOM globals. This only affects tests.
@@ -28,15 +29,17 @@ The Jest setup makes `navigator` and `crypto` writable in Jest 29 on Node 24 bef
 ## GitHub Actions
 
 - `.github/workflows/tests.yml` installs, lints, builds and inspects the package on
-  main, pull requests and manual runs. JS API integration tests run when the
-  `APIKEY` secret is available. Missing credentials produce an explicit warning
-  and summary; fork PRs still run the checks that do not require secrets.
+  pushes to main and pull requests targeting main. The job produces the `build` status
+  check; select it when configuring branch protection. Integration tests always run and require a real `APIKEY`; missing
+  credentials fail CI. Fork pull requests do not receive these secrets.
 - `.github/workflows/release.yml` releases version tags without a `v` prefix, such
   as `0.0.13`. A manual run must also select a tag matching `package.json`.
+  The tagged commit must be in the history of `main`.
   A release always requires passing integration tests with a real `APIKEY`.
 
-Configure the GitHub Actions secrets `APIKEY` and, if needed, `REFERRER` (default:
-`http://yandex.localhost/`). No npm publish token is required.
+Configure the GitHub Actions secrets `APIKEY` and `REFERRER`. The referrer must
+be allowed for your API key (for example, `http://yandex.localhost/`). No npm
+publish token is required.
 
 ## Enable npm publishing
 

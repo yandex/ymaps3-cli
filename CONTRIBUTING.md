@@ -15,7 +15,7 @@ use locally (for example, `http://yandex.localhost/`). Set `REFERRER` accordingl
 npm run lint
 npm run build
 node ./dist --help
-REFERRER=http://yandex.localhost/ npm test -- --runInBand
+REFERRER=http://yandex.localhost/ npm test
 npm pack --dry-run
 ```
 
@@ -25,15 +25,17 @@ also ships webpack/Jest helpers and project templates; keep these in the tarball
 ## GitHub Actions
 
 - `.github/workflows/tests.yml` installs, lints, builds and inspects the package on
-  main, pull requests and manual runs. JS API integration tests run when the
-  `APIKEY` secret is available. Missing credentials produce an explicit warning
-  and summary; fork PRs still run the checks that do not require secrets.
+  pushes to main and pull requests targeting main. The job produces the `build` status
+  check; select it when configuring branch protection. Integration tests always run and require a real `APIKEY`; missing
+  credentials fail CI. Fork pull requests do not receive these secrets.
 - `.github/workflows/release.yml` releases version tags without a `v` prefix, such
   as `0.0.26`. A manual run must also select a tag matching `package.json`.
+  The tagged commit must be in the history of `main`.
   A release always requires passing integration tests with a real `APIKEY`.
 
-Configure the GitHub Actions secrets `APIKEY` and, if needed, `REFERRER` (default:
-`http://yandex.localhost/`). No npm publish token is required.
+Configure the GitHub Actions secrets `APIKEY` and `REFERRER`. The referrer must
+be allowed for your API key (for example, `http://yandex.localhost/`). No npm
+publish token is required.
 
 ## Enable npm publishing
 
@@ -74,6 +76,6 @@ matching version tag and atomically pushes main with only that new tag. It
 refuses a dirty checkout or a different branch. Do not use `git push --tags`
 when importing historical tags.
 
-Stable versions publish to npm `latest`. Explicitly prepared prerelease tags
-publish to `next`; a prerelease does not replace `latest`. Git tags identify
-source commits; npm dist-tags identify installation channels.
+This workflow publishes stable versions to npm `latest`. Prereleases require a
+separate publishing configuration; it does not automatically select `next`.
+Git tags identify source commits; npm dist-tags identify installation channels.

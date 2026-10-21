@@ -54,9 +54,6 @@ jobs:
         run: npm run lint
       - name: Build
         run: npm run build
-        env:
-          APIKEY: ${{ secrets.APIKEY }}
-          REFERRER: ${{ secrets.REFERRER }}
       - name: Test
         run: npm test
         env:

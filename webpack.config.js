@@ -5,10 +5,6 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 Object.assign(process.env, require('dotenv').config());
 
-if (!process.env.APIKEY) {
-    throw new Error('Define APIKEY env');
-}
-
 module.exports = (args, env, dir = process.cwd()) => {
     const {name} = require(path.resolve(dir, './package.json'));
 
@@ -37,7 +33,13 @@ module.exports = (args, env, dir = process.cwd()) => {
         },
         devServer: {
             hot: true,
-            setupMiddlewares: replaceMiddleware(dir),
+            setupMiddlewares: (middlewares, devServer) => {
+                if (!process.env.APIKEY) {
+                    throw new Error('Define APIKEY env to run examples with the dev server');
+                }
+
+                return replaceMiddleware(dir)(middlewares, devServer);
+            },
             client: {
                 overlay: true,
                 progress: true

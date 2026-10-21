@@ -22,6 +22,11 @@ npm pack --dry-run
 Building the CLI makes no JS API requests and requires no API key. The npm package
 also ships webpack/Jest helpers and project templates; keep these in the tarball.
 
+The shared webpack config allows library builds without `APIKEY`. It checks the
+key only when starting the dev server for examples. Existing projects can keep
+passing a real key or a placeholder to their build scripts. The Jest helper still
+requires a real key for integration tests.
+
 ## GitHub Actions
 
 - `.github/workflows/tests.yml` installs, lints, builds and inspects the package on

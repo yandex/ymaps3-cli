@@ -19,9 +19,11 @@ REFERRER=http://yandex.localhost/ npm test
 npm pack --dry-run
 ```
 
-Building the package makes no JS API requests, but the shared webpack configuration
-requires a nonempty key. In CI, both build and tests use the `APIKEY` and `REFERRER`
-secrets.
+Building the package makes no JS API requests and requires no API key, including
+in development mode. The dev server (`npm start`) requires `APIKEY` to serve working
+map examples. Integration tests also require a real key; in CI, only tests receive
+the `APIKEY` and `REFERRER` secrets. Existing build scripts that pass a key or a
+placeholder continue to work.
 
 The Jest setup makes `navigator` and `crypto` writable in Jest 29 on Node 24 before
 `@yandex/ymaps3-cli` installs its JSDOM globals. This only affects tests.

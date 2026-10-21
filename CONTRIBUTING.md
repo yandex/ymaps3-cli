@@ -81,6 +81,7 @@ matching version tag and atomically pushes main with only that new tag. It
 refuses a dirty checkout or a different branch. Do not use `git push --tags`
 when importing historical tags.
 
-This workflow publishes stable versions to npm `latest`. Prereleases require a
-separate publishing configuration; it does not automatically select `next`.
+This workflow publishes stable versions to npm `latest` and prerelease versions
+(tags containing `-`, such as `0.0.26-beta.1`) to `next`. The `bump` script still
+increments the patch version; prerelease versions must be prepared separately.
 Git tags identify source commits; npm dist-tags identify installation channels.

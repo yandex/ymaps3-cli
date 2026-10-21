@@ -96,5 +96,12 @@ Stable versions publish to npm `latest`. Explicitly prepared prerelease tags
 publish to `next`; a prerelease does not replace `latest`. Git tags identify
 source commits; npm dist-tags identify installation channels.
 
+To switch to stable releases, replace `npm version prerelease --preid=beta` with
+`npm version patch` in the `bump` script in `package.json`, keeping
+`--no-git-tag-version` and the rest of the script unchanged. Commit this change
+and merge it into `main`, then run `npm run bump` from a clean, up-to-date `main`.
+For example, `0.0.1-beta.3` becomes `0.0.1` and is published to `latest`;
+subsequent runs produce `0.0.2`, `0.0.3`, and so on.
+
 The template pins Vue and the Node/Scheduler type packages to versions compatible
 with TypeScript 5.1. Commit the generated `package-lock.json` before running CI.

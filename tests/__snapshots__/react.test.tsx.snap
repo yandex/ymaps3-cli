@@ -145,12 +145,6 @@ exports[`React YMap test should make react map 1`] = `
       ],
       "nodeName": "ymaps3",
     },
-    {
-      "attributes": {
-        "class": "ymaps3--controls ymaps3--controls_bottom ymaps3--controls_left ymaps3--controls_horizontal",
-      },
-      "nodeName": "ymaps3",
-    },
   ],
   "nodeName": "ymaps3",
 }

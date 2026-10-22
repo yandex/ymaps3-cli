@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`React YMap test should make react map 1`] = `
+{
+  "attributes": {
+    "class": "ymaps3--map-container",
+  },
+  "children": [
+    {
+      "attributes": {
+        "class": "ymaps3--map",
+        "style": "width: 640px; height: 480px;",
+      },
+      "children": [
+        {
+          "attributes": {
+            "class": "ymaps3--main-engine-container",
+          },
+          "children": [
+            {
+              "attributes": {},
+              "children": [
+                {
+                  "attributes": {
+                    "class": "ymaps3--layer ymaps3--tile-layer",
+                    "style": "opacity: 1; perspective: 895.6921938165306px;",
+                  },
+                  "children": [
+                    {
+                      "attributes": {
+                        "class": "ymaps3--tile-layer__container",
+                        "data-z": "12",
+                        "style": "transform: rotateX(0.00000rad) translate3d(0px, 0px, 0px) rotateZ(0.00000rad) translate3d(0px, 0px, 0px); z-index: 12;",
+                      },
+                      "nodeName": "ymaps3",
+                    },
+                  ],
+                  "nodeName": "ymaps3",
+                },
+              ],
+              "nodeName": "ymaps3",
+            },
+          ],
+          "nodeName": "ymaps3",
+        },
+        {
+          "attributes": {
+            "class": "ymaps3--top-engine-container",
+          },
+          "children": [
+            {
+              "attributes": {},
+              "children": [
+                {
+                  "attributes": {
+                    "class": "ymaps3--layer ymaps3--graphics-layer",
+                    "style": "opacity: 1; perspective: 895.6921938165306px;",
+                  },
+                  "nodeName": "ymaps3",
+                },
+                {
+                  "attributes": {
+                    "class": "ymaps3--layer ymaps3--marker-layer",
+                    "style": "opacity: 1; transform-origin: 320px 240px;",
+                  },
+                  "nodeName": "ymaps3",
+                },
+              ],
+              "nodeName": "ymaps3",
+            },
+          ],
+          "nodeName": "ymaps3",
+        },
+      ],
+      "nodeName": "ymaps3",
+    },
+    {
+      "attributes": {
+        "class": "ymaps3--controls ymaps3--controls_center ymaps3--controls_left ymaps3--controls_vertical",
+      },
+      "children": [
+        {
+          "attributes": {
+            "class": "ymaps3--control ymaps3--control__background",
+          },
+          "children": [
+            {
+              "attributes": {},
+              "children": [
+                "test control",
+              ],
+              "nodeName": "div",
+            },
+          ],
+          "nodeName": "ymaps3",
+        },
+      ],
+      "nodeName": "ymaps3",
+    },
+    {
+      "attributes": {
+        "class": "ymaps3--map-copyrights ymaps3--map-copyrights_bottom ymaps3--map-copyrights_right",
+      },
+      "children": [
+        {
+          "attributes": {
+            "class": "ymaps3--map-copyrights__container",
+          },
+          "children": [
+            {
+              "attributes": {
+                "class": "ymaps3--map-copyrights__text",
+                "title": "",
+              },
+              "nodeName": "ymaps3",
+            },
+            {
+              "attributes": {
+                "class": "ymaps3--map-copyrights__user-agreements",
+                "href": "https://yandex.com/legal/maps_termsofuse/?lang=en_US",
+                "target": "_blank",
+              },
+              "children": [
+                "User Agreement",
+              ],
+              "nodeName": "a",
+            },
+          ],
+          "nodeName": "ymaps3",
+        },
+        {
+          "attributes": {
+            "class": "ymaps3--map-copyrights__logo ymaps3--icon-logo-en-black",
+            "href": "https://yandex.ru/maps/?from=api-maps&utm_source=jsapi&ll=37.62000000000001%2C55.749999999993705&origin=jsapi_3&z=12&l=map",
+          },
+          "nodeName": "a",
+        },
+        {
+          "attributes": {
+            "class": "ymaps3--map-copyrights__scale",
+            "style": "bottom: 36px;",
+          },
+          "nodeName": "ymaps3",
+        },
+      ],
+      "nodeName": "ymaps3",
+    },
+  ],
+  "nodeName": "ymaps3",
+}
+`;
